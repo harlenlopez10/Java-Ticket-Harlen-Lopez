@@ -6,7 +6,7 @@ package Javaticket_harlenlopez1;
 
 import static Javaticket_harlenlopez1.Crear_Evento.hayEventos;
 import static Javaticket_harlenlopez1.Crear_Usuario.users;
-import static Javaticket_harlenlopez1.Login.pos;
+import static Javaticket_harlenlopez1.MAIN_Login.pos;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,61 +36,80 @@ public class Administracion_de_eventos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backgroundLabel = new javax.swing.JLabel();
-        CrearEvento = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        VerEvento = new javax.swing.JButton();
         EliminarEvento = new javax.swing.JButton();
         EditarEvento = new javax.swing.JButton();
-        VerEvento = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        CrearEvento = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backgroundLabel.setForeground(new java.awt.Color(51, 0, 51));
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Administracion_eventos_background.png"))); // NOI18N
-        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 600, 618));
+        jPanel2.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CrearEvento.setText("Crear evento");
-        CrearEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CrearEventoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CrearEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 200, 60));
-
-        EliminarEvento.setText("Eliminar evento");
-        EliminarEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EliminarEventoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(EliminarEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 260, 50));
-
-        EditarEvento.setText("Editar un evento");
-        EditarEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditarEventoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(EditarEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 220, 50));
-
-        VerEvento.setText("Ver evento");
-        VerEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerEventoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(VerEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 200, 40));
-
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Regresar al Menu principal");
+        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 400, 60));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 400, 60));
+
+        VerEvento.setBackground(new java.awt.Color(255, 255, 255));
+        VerEvento.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        VerEvento.setForeground(new java.awt.Color(0, 0, 0));
+        VerEvento.setText("Ver evento");
+        VerEvento.setBorder(new javax.swing.border.MatteBorder(null));
+        VerEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerEventoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(VerEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 260, 50));
+
+        EliminarEvento.setBackground(new java.awt.Color(255, 255, 255));
+        EliminarEvento.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        EliminarEvento.setForeground(new java.awt.Color(0, 0, 0));
+        EliminarEvento.setText("Eliminar evento");
+        EliminarEvento.setBorder(new javax.swing.border.MatteBorder(null));
+        EliminarEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarEventoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(EliminarEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 260, 50));
+
+        EditarEvento.setBackground(new java.awt.Color(255, 255, 255));
+        EditarEvento.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        EditarEvento.setForeground(new java.awt.Color(0, 0, 0));
+        EditarEvento.setText("Editar un evento");
+        EditarEvento.setBorder(new javax.swing.border.MatteBorder(null));
+        EditarEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarEventoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(EditarEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 260, 50));
+
+        CrearEvento.setBackground(new java.awt.Color(255, 255, 255));
+        CrearEvento.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        CrearEvento.setForeground(new java.awt.Color(0, 0, 0));
+        CrearEvento.setText("Crear evento");
+        CrearEvento.setBorder(new javax.swing.border.MatteBorder(null));
+        CrearEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearEventoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(CrearEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 260, 50));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,8 +241,7 @@ public class Administracion_de_eventos extends javax.swing.JFrame {
     private javax.swing.JButton EditarEvento;
     private javax.swing.JButton EliminarEvento;
     private javax.swing.JButton VerEvento;
-    private javax.swing.JLabel backgroundLabel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

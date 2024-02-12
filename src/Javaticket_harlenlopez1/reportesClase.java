@@ -5,7 +5,7 @@
 package Javaticket_harlenlopez1;
 
 import static Javaticket_harlenlopez1.Crear_Evento.eventos;
-import static Javaticket_harlenlopez1.Login.usuarioLogin;
+import static Javaticket_harlenlopez1.MAIN_Login.usuarioLogin;
 import static Javaticket_harlenlopez1.Reportes.jList1;
 import static Javaticket_harlenlopez1.Reportes.modelo;
 import static Javaticket_harlenlopez1.confirmar_evento.eventosCancelados;

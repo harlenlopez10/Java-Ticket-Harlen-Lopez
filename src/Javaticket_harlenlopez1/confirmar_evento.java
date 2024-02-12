@@ -7,7 +7,7 @@ package Javaticket_harlenlopez1;
 import static Javaticket_harlenlopez1.Administracion_de_eventos.irA;
 import static Javaticket_harlenlopez1.Crear_Evento.eventos;
 import static Javaticket_harlenlopez1.Crear_Evento.user;
-import static Javaticket_harlenlopez1.Login.usuarioLogin;
+import static Javaticket_harlenlopez1.MAIN_Login.usuarioLogin;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;

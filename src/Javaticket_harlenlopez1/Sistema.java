@@ -1,7 +1,7 @@
 package Javaticket_harlenlopez1;
 
 import static Javaticket_harlenlopez1.Crear_Usuario.users;
-import static Javaticket_harlenlopez1.Login.pos;
+import static Javaticket_harlenlopez1.MAIN_Login.pos;
 import javax.swing.JOptionPane;
 
 /*
@@ -127,7 +127,7 @@ public class Sistema extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        Login pasar=new Login();
+        MAIN_Login pasar=new MAIN_Login();
         pasar.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
