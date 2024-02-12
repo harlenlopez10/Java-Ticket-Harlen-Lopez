@@ -34,43 +34,71 @@ public class Borrar_Usuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PasswordTextbox = new javax.swing.JTextField();
-        UsuarioTextbox = new javax.swing.JTextField();
-        backgroundLabel = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         cancelar = new javax.swing.JButton();
         Crear_usuario = new javax.swing.JButton();
+        PasswordTextbox = new javax.swing.JTextField();
+        UsuarioTextbox = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 345, -1));
-        getContentPane().add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 345, -1));
 
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/borrar_usuario_background.png"))); // NOI18N
-        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 367));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cancelar.setBackground(new java.awt.Color(255, 255, 255));
+        cancelar.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(0, 0, 0));
         cancelar.setText("Cancelar");
+        cancelar.setBorder(new javax.swing.border.MatteBorder(null));
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 150, 50));
+        jPanel1.add(cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 150, 50));
 
+        Crear_usuario.setBackground(new java.awt.Color(255, 255, 255));
+        Crear_usuario.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        Crear_usuario.setForeground(new java.awt.Color(0, 0, 0));
         Crear_usuario.setText("Borrar Usuario");
+        Crear_usuario.setBorder(new javax.swing.border.MatteBorder(null));
         Crear_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Crear_usuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(Crear_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 200, 60));
+        jPanel1.add(Crear_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 200, 60));
+        jPanel1.add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 350, 50));
+        jPanel1.add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 345, 50));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 3, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("ELIMINAR USUARIO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Contraseña:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Usuario:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         // TODO add your handling code here:
-        Administracion_de_usuarios pasar=new Administracion_de_usuarios();
-        pasar.setVisible(true);
+        Administracion_de_usuarios run=new Administracion_de_usuarios();
+        run.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_cancelarActionPerformed
 
@@ -152,7 +180,10 @@ public class Borrar_Usuario extends javax.swing.JFrame {
     private javax.swing.JButton Crear_usuario;
     private javax.swing.JTextField PasswordTextbox;
     private javax.swing.JTextField UsuarioTextbox;
-    private javax.swing.JLabel backgroundLabel;
     private javax.swing.JButton cancelar;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

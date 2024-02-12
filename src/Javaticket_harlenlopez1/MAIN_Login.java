@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 /**
  *
- * @author adalb
+ * 
  */
 public class MAIN_Login extends javax.swing.JFrame {
     
@@ -27,9 +27,8 @@ public class MAIN_Login extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        users.add(new Usuarios("Bryan Banegas","admin","supersecreto",18,1));
-        eventos.add(new Evento_Deportivo("","cancelado","","",
-                                fechaCrear,0,0,"","",""));
+        users.add(new Usuarios("Harlen Lopez","admin","supersecreto",18,1));
+        eventos.add(new Evento_Deportivo("","cancelado","","",fechaCrear,0,0,"","",""));
         user.add("");
     }
     public static String usuarioLogin="";
@@ -93,10 +92,12 @@ public class MAIN_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarActionPerformed
-        // TODO add your handling code here:
-        usuarioLogin=UsuarioTextbox.getText();
-        contraseñaLogin=PasswordTextbox.getText();
+        //Aqui extraemos los datos de inicio de sesion
+        usuarioLogin = UsuarioTextbox.getText();
+        contraseñaLogin = PasswordTextbox.getText();
+        
         boolean noExiste=false;
+        
         if(usuarioLogin.isEmpty()||contraseñaLogin.isEmpty()){
             JOptionPane.showMessageDialog(null, "Por favor, llenar todos los campos.");
         }else{

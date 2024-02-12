@@ -33,27 +33,19 @@ public class confirmar_usuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        UsuarioTextbox = new javax.swing.JTextField();
-        PasswordTextbox = new javax.swing.JPasswordField();
-        backgroundLabel = new javax.swing.JLabel();
-        Ingresar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         Cancelar = new javax.swing.JButton();
+        Ingresar = new javax.swing.JButton();
+        PasswordTextbox = new javax.swing.JPasswordField();
+        UsuarioTextbox = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 283, -1));
-        getContentPane().add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 283, -1));
 
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/confirmar_usuario.png"))); // NOI18N
-        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 566, 272));
-
-        Ingresar.setText("Ingresar");
-        Ingresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 130, 60));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Cancelar.setText("Cancelar");
         Cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +53,29 @@ public class confirmar_usuario extends javax.swing.JFrame {
                 CancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 150, 40));
+        jPanel1.add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 150, 60));
+
+        Ingresar.setText("Ingresar");
+        Ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 130, 60));
+        jPanel1.add(PasswordTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 283, 40));
+        jPanel1.add(UsuarioTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 283, 40));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Contraseña:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Usuario:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,6 +163,8 @@ public class confirmar_usuario extends javax.swing.JFrame {
     private javax.swing.JButton Ingresar;
     private javax.swing.JPasswordField PasswordTextbox;
     private javax.swing.JTextField UsuarioTextbox;
-    private javax.swing.JLabel backgroundLabel;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

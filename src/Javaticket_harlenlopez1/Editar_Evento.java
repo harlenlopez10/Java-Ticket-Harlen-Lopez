@@ -48,105 +48,69 @@ public class Editar_Evento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        MontoTextbox = new javax.swing.JTextField();
-        CantidadTextbox = new javax.swing.JTextField();
-        CrearEvento = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        Equipo2Textbox = new javax.swing.JTextField();
-        TituloTextbox = new javax.swing.JTextField();
-        CodigoTextbox = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        DescripcionTextbox = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        tipoComboBox = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
         FechaTextbox = new com.toedter.calendar.JDateChooser();
-        jLabel11 = new javax.swing.JLabel();
-        equipo2Label = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         equipo1Label = new javax.swing.JLabel();
+        tipoComboBox = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        nombreMiembro7 = new javax.swing.JTextField();
+        equipo2Label = new javax.swing.JLabel();
+        rolBanda1 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        CodigoTextbox = new javax.swing.JTextField();
+        CrearEvento = new javax.swing.JButton();
+        nombreMiembro3 = new javax.swing.JTextField();
+        CantidadTextbox = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        nombreMiembro10 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        rolBanda2 = new javax.swing.JComboBox<>();
+        rolBanda3 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        MontoTextbox = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        TituloTextbox = new javax.swing.JTextField();
+        nombreMiembro9 = new javax.swing.JTextField();
+        Equipo2Textbox = new javax.swing.JTextField();
+        nombreMiembro4 = new javax.swing.JTextField();
+        nombreMiembro8 = new javax.swing.JTextField();
+        nombreMiembro2 = new javax.swing.JTextField();
         Equipo1Textbox = new javax.swing.JTextField();
         nombreMiembro1 = new javax.swing.JTextField();
-        nombreMiembro2 = new javax.swing.JTextField();
-        nombreMiembro3 = new javax.swing.JTextField();
-        nombreMiembro4 = new javax.swing.JTextField();
         nombreMiembro5 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        DescripcionTextbox = new javax.swing.JTextField();
         nombreMiembro6 = new javax.swing.JTextField();
-        nombreMiembro7 = new javax.swing.JTextField();
-        nombreMiembro8 = new javax.swing.JTextField();
-        nombreMiembro9 = new javax.swing.JTextField();
-        nombreMiembro10 = new javax.swing.JTextField();
-        rolBanda3 = new javax.swing.JComboBox<>();
-        rolBanda2 = new javax.swing.JComboBox<>();
-        rolBanda1 = new javax.swing.JComboBox<>();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel4.setText("Descripcion:");
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Titulo de evento:");
+        FechaTextbox.setDate(eventos.get(pos).getFecha());
+        jPanel1.add(FechaTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 185, 40));
 
-        jLabel10.setText("Monto:");
-
-        jLabel5.setText("Cantidad de personas:");
-
-        if(tipo==3){
-            MontoTextbox.setVisible(false);
-        }else{
-            int Int=(int)eventos.get(pos).getMonto();
-            String montotext=String.valueOf(Int);
-            MontoTextbox.setText(montotext);
-        }
-
-        int Ints=(int)eventos.get(pos).getCantidad();
-        String montotexto=String.valueOf(Ints);
-        CantidadTextbox.setText(montotexto);
-
-        CrearEvento.setText("Editar");
-        CrearEvento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CrearEventoActionPerformed(evt);
-            }
-        });
-
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Cancelar");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, 120, 80));
 
+        equipo1Label.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        equipo1Label.setForeground(new java.awt.Color(51, 51, 51));
+        equipo1Label.setText("Titulo de evento:");
         if(tipo==3){
-            Equipo2Textbox.setVisible(false);
+            equipo1Label.setText("Cantidad de personas convertidas:");
         }else if(tipo==2){
-            Equipo2Textbox.setVisible(false);
+            equipo1Label.setText("Miembros de Banda:");
         }else if(tipo==1){
-            //Equipo2Textbox.setText();
+            equipo1Label.setText("Miembros de Equipo 1:");
         }
-
-        TituloTextbox.setText(eventos.get(pos).getTitulo());
-
-        CodigoTextbox.setText(eventos.get(pos).getCodigo());
-
-        jLabel3.setText("Codigo de evento:");
-
-        jLabel7.setText("Equipo 1:");
-        if(tipo==3){
-            jLabel7.setVisible(false);
-        }else if(tipo==2){
-            jLabel7.setVisible(false);
-        }
-
-        DescripcionTextbox.setText(eventos.get(pos).getDescripcion());
-
-        jLabel8.setText("Equipo 2:");
-        if(tipo==3){
-            jLabel8.setVisible(false);
-        }else if(tipo==2){
-            jLabel8.setVisible(false);
-        }
-
-        jLabel6.setText("Fecha:");
+        jPanel1.add(equipo1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, -1, 24));
 
         if(tipo==3){
             tipoComboBox.setVisible(false);
@@ -160,18 +124,22 @@ public class Editar_Evento extends javax.swing.JFrame {
                 tipoComboBoxItemStateChanged(evt);
             }
         });
+        jPanel1.add(tipoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 80, 40));
 
-        FechaTextbox.setDate(eventos.get(pos).getFecha());
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Codigo de evento:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, 24));
 
-        jLabel11.setText("Tipo:");
         if(tipo==3){
-            jLabel11.setVisible(false);
+            nombreMiembro7.setVisible(false);
         }else if(tipo==2){
-            jLabel11.setText("Tipo de musica:");
-        }else if(tipo==1){
-            jLabel11.setText("Tipo de deporte:");
+            nombreMiembro7.setVisible(false);
         }
+        jPanel1.add(nombreMiembro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 110, 40));
 
+        equipo2Label.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        equipo2Label.setForeground(new java.awt.Color(51, 51, 51));
         equipo2Label.setText("Titulo de evento:");
         if(tipo==3){
             equipo2Label.setVisible(false);
@@ -180,97 +148,7 @@ public class Editar_Evento extends javax.swing.JFrame {
         }else if(tipo==1){
             equipo2Label.setText("Miembros de Equipo 2:");
         }
-
-        equipo1Label.setText("Titulo de evento:");
-        if(tipo==3){
-            equipo1Label.setText("Cantidad de personas convertidas:");
-        }else if(tipo==2){
-            equipo1Label.setText("Miembros de Banda:");
-        }else if(tipo==1){
-            equipo1Label.setText("Miembros de Equipo 1:");
-        }
-
-        if(tipo==3){
-            Equipo1Textbox.setVisible(false);
-        }else if(tipo==2){
-            Equipo1Textbox.setVisible(false);
-        }else{
-
-        }
-
-        if(tipo==3){
-            nombreMiembro2.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro3.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro4.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro4.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro5.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro5.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro6.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro6.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro7.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro7.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro8.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro8.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro9.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro9.setVisible(false);
-        }
-
-        if(tipo==3){
-            nombreMiembro10.setVisible(false);
-        }else if(tipo==2){
-            nombreMiembro10.setVisible(false);
-        }
-
-        rolBanda3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Baterista", "Guitarrista", "Vocalista" }));
-        rolBanda3.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rolBanda3ItemStateChanged(evt);
-            }
-        });
-        if(tipo==2){
-            rolBanda3.setVisible(true);
-        }else{
-            rolBanda3.setVisible(false);
-        }
-
-        rolBanda2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Baterista", "Guitarrista", "Vocalista" }));
-        rolBanda2.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rolBanda2ItemStateChanged(evt);
-            }
-        });
-        if(tipo==2){
-            rolBanda2.setVisible(true);
-        }else{
-            rolBanda2.setVisible(false);
-        }
+        jPanel1.add(equipo2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 80, -1, 24));
 
         rolBanda1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Baterista", "Guitarrista", "Vocalista" }));
         rolBanda1.addItemListener(new java.awt.event.ItemListener() {
@@ -283,187 +161,215 @@ public class Editar_Evento extends javax.swing.JFrame {
         }else{
             rolBanda1.setVisible(false);
         }
+        jPanel1.add(rolBanda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 90, 30));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel7.setText("Equipo 1:");
+        if(tipo==3){
+            jLabel7.setVisible(false);
+        }else if(tipo==2){
+            jLabel7.setVisible(false);
+        }
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, 30));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel5.setText("Cantidad de personas:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+
+        CodigoTextbox.setText(eventos.get(pos).getCodigo());
+        jPanel1.add(CodigoTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 345, 40));
+
+        CrearEvento.setBackground(new java.awt.Color(255, 255, 255));
+        CrearEvento.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        CrearEvento.setForeground(new java.awt.Color(0, 0, 0));
+        CrearEvento.setText("Editar");
+        CrearEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearEventoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CrearEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 110, 80));
+
+        if(tipo==3){
+            nombreMiembro3.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 110, 40));
+
+        int Ints=(int)eventos.get(pos).getCantidad();
+        String montotexto=String.valueOf(Ints);
+        CantidadTextbox.setText(montotexto);
+        jPanel1.add(CantidadTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 180, 40));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("Descripcion:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, 24));
+
+        if(tipo==3){
+            nombreMiembro10.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro10.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro10, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 350, 110, 40));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel11.setText("Tipo:");
+        if(tipo==3){
+            jLabel11.setVisible(false);
+        }else if(tipo==2){
+            jLabel11.setText("Tipo de musica:");
+        }else if(tipo==1){
+            jLabel11.setText("Tipo de deporte:");
+        }
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, 24));
+
+        rolBanda2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Baterista", "Guitarrista", "Vocalista" }));
+        rolBanda2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                rolBanda2ItemStateChanged(evt);
+            }
+        });
+        if(tipo==2){
+            rolBanda2.setVisible(true);
+        }else{
+            rolBanda2.setVisible(false);
+        }
+        jPanel1.add(rolBanda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 90, 30));
+
+        rolBanda3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Baterista", "Guitarrista", "Vocalista" }));
+        rolBanda3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                rolBanda3ItemStateChanged(evt);
+            }
+        });
+        if(tipo==2){
+            rolBanda3.setVisible(true);
+        }else{
+            rolBanda3.setVisible(false);
+        }
+        jPanel1.add(rolBanda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 90, 30));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Titulo de evento:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, 24));
+
+        if(tipo==3){
+            MontoTextbox.setVisible(false);
+        }else{
+            int Int=(int)eventos.get(pos).getMonto();
+            String montotext=String.valueOf(Int);
+            MontoTextbox.setText(montotext);
+        }
+        jPanel1.add(MontoTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 185, 40));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setText("Equipo 2:");
+        if(tipo==3){
+            jLabel8.setVisible(false);
+        }else if(tipo==2){
+            jLabel8.setVisible(false);
+        }
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, -1, 30));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("L.2000");
         if(tipo==3){
 
         }else{
             jLabel12.setVisible(false);
         }
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
+
+        TituloTextbox.setText(eventos.get(pos).getTitulo());
+        jPanel1.add(TituloTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 345, 40));
+
+        if(tipo==3){
+            nombreMiembro9.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro9.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 310, 110, 40));
+
+        if(tipo==3){
+            Equipo2Textbox.setVisible(false);
+        }else if(tipo==2){
+            Equipo2Textbox.setVisible(false);
+        }else if(tipo==1){
+            //Equipo2Textbox.setText();
+        }
+        jPanel1.add(Equipo2Textbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 133, 30));
+
+        if(tipo==3){
+            nombreMiembro4.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro4.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 110, 40));
+
+        if(tipo==3){
+            nombreMiembro8.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro8.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 270, 110, 40));
+
+        if(tipo==3){
+            nombreMiembro2.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 110, 40));
+
+        if(tipo==3){
+            Equipo1Textbox.setVisible(false);
+        }else if(tipo==2){
+            Equipo1Textbox.setVisible(false);
+        }else{
+
+        }
+        jPanel1.add(Equipo1Textbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 133, 30));
+        jPanel1.add(nombreMiembro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 110, 40));
+
+        if(tipo==3){
+            nombreMiembro5.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro5.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 110, 40));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setText("Fecha:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, 24));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel10.setText("Monto:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+
+        DescripcionTextbox.setText(eventos.get(pos).getDescripcion());
+        jPanel1.add(DescripcionTextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 345, 40));
+
+        if(tipo==3){
+            nombreMiembro6.setVisible(false);
+        }else if(tipo==2){
+            nombreMiembro6.setVisible(false);
+        }
+        jPanel1.add(nombreMiembro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 190, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel1)
-                .addGap(35, 35, 35)
-                .addComponent(TituloTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128)
-                .addComponent(equipo1Label)
-                .addGap(61, 61, 61)
-                .addComponent(equipo2Label))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel3)
-                .addGap(26, 26, 26)
-                .addComponent(CodigoTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(rolBanda1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(nombreMiembro1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(nombreMiembro6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel5)
-                .addGap(6, 6, 6)
-                .addComponent(CantidadTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(193, 193, 193)
-                .addComponent(rolBanda2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(nombreMiembro2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(nombreMiembro7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel4)
-                .addGap(59, 59, 59)
-                .addComponent(DescripcionTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(rolBanda3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(nombreMiembro3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(nombreMiembro8, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel10)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel12)
-                .addGap(34, 34, 34)
-                .addComponent(MontoTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(288, 288, 288)
-                .addComponent(nombreMiembro4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(nombreMiembro9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel6)
-                .addGap(91, 91, 91)
-                .addComponent(FechaTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(jLabel11)
-                .addGap(14, 14, 14)
-                .addComponent(tipoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128)
-                .addComponent(nombreMiembro5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(nombreMiembro10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(Equipo1Textbox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(Equipo2Textbox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(CrearEvento)
-                .addGap(528, 528, 528)
-                .addComponent(jButton1))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1051, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(TituloTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(equipo1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(equipo2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(CodigoTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(rolBanda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rolBanda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(CantidadTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(DescripcionTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(rolBanda3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel12)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(MontoTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(nombreMiembro4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(FechaTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(tipoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(nombreMiembro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombreMiembro10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Equipo1Textbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Equipo2Textbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CrearEvento)
-                    .addComponent(jButton1)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -928,6 +834,7 @@ public class Editar_Evento extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel6;
     public static javax.swing.JLabel jLabel7;
     public static javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     public static javax.swing.JTextField nombreMiembro1;
     public static javax.swing.JTextField nombreMiembro10;
     public static javax.swing.JTextField nombreMiembro2;

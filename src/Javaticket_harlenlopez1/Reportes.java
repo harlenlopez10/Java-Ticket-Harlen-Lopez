@@ -43,115 +43,152 @@ public class Reportes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Ingresar = new javax.swing.JButton();
         TituloTextBox = new javax.swing.JLabel();
-        fechafinal = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        fechainicial = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         cantidadDeportes = new javax.swing.JLabel();
         cantidadReligiosos = new javax.swing.JLabel();
         cantidadMusicales = new javax.swing.JLabel();
-        backgroundLabel = new javax.swing.JLabel();
-        eventosFuturos = new javax.swing.JButton();
-        eventosCancelados = new javax.swing.JButton();
-        Ingreso = new javax.swing.JButton();
-        PerfilUsuario = new javax.swing.JButton();
-        eventosRealizados = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Ingresar = new javax.swing.JButton();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        fechafinal = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        fechainicial = new javax.swing.JLabel();
         regresar = new javax.swing.JButton();
+        PerfilUsuario = new javax.swing.JButton();
+        Ingreso = new javax.swing.JButton();
+        eventosCancelados = new javax.swing.JButton();
+        eventosFuturos = new javax.swing.JButton();
+        eventosRealizados = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(TituloTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 300, 10));
 
+        jScrollPane1.setViewportView(jList1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 490, 130));
+
+        cantidadDeportes.setForeground(new java.awt.Color(0, 0, 0));
+        cantidadDeportes.setText("0");
+        getContentPane().add(cantidadDeportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, -1, -1));
+
+        cantidadReligiosos.setForeground(new java.awt.Color(0, 0, 0));
+        cantidadReligiosos.setText("0");
+        getContentPane().add(cantidadReligiosos, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
+
+        cantidadMusicales.setForeground(new java.awt.Color(0, 0, 0));
+        cantidadMusicales.setText("0");
+        getContentPane().add(cantidadMusicales, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Ingresar.setBackground(new java.awt.Color(255, 255, 255));
+        Ingresar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        Ingresar.setForeground(new java.awt.Color(0, 0, 0));
         Ingresar.setText("Ingresar fechas");
+        Ingresar.setBorder(new javax.swing.border.MatteBorder(null));
         Ingresar.setVisible(false);
         Ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IngresarActionPerformed(evt);
             }
         });
-        getContentPane().add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 360, -1, -1));
-        getContentPane().add(TituloTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 300, 10));
-
-        fechafinal.setText("Fecha Final:");
-        fechafinal.setVisible(false);
-        getContentPane().add(fechafinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 70, -1));
+        jPanel1.add(Ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 520, 150, 50));
 
         jDateChooser2.setVisible(false);
-        getContentPane().add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 120, -1));
+        jPanel1.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 530, 120, -1));
 
-        fechainicial.setText("Fecha Inicial:");
-        fechainicial.setVisible(false);
-        getContentPane().add(fechainicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 70, -1));
+        fechafinal.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        fechafinal.setForeground(new java.awt.Color(0, 0, 0));
+        fechafinal.setText("Fecha Final:");
+        fechafinal.setVisible(false);
+        jPanel1.add(fechafinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 100, -1));
 
         jDateChooser1.setVisible(false);
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 360, 120, -1));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 120, -1));
 
-        jScrollPane1.setViewportView(jList1);
+        fechainicial.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        fechainicial.setForeground(new java.awt.Color(0, 0, 0));
+        fechainicial.setText("Fecha Inicial:");
+        fechainicial.setVisible(false);
+        jPanel1.add(fechainicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 100, -1));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 206, -1));
-
-        cantidadDeportes.setText("0");
-        getContentPane().add(cantidadDeportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, -1, -1));
-
-        cantidadReligiosos.setText("0");
-        getContentPane().add(cantidadReligiosos, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
-
-        cantidadMusicales.setText("0");
-        getContentPane().add(cantidadMusicales, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
-
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Reportes_background.png"))); // NOI18N
-        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 394));
-
-        eventosFuturos.setText("Listar eventos futuros");
-        eventosFuturos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eventosFuturosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(eventosFuturos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 133, 180, 30));
-
-        eventosCancelados.setText("Listar eventos cancelados");
-        eventosCancelados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eventosCanceladosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(eventosCancelados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 183, 210, 30));
-
-        Ingreso.setText("Ingreso generado por fecha");
-        Ingreso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 230, -1));
-
-        PerfilUsuario.setText("Ver Perfil de usuario");
-        PerfilUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PerfilUsuarioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PerfilUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 273, 170, 30));
-
-        eventosRealizados.setText("Listar eventos realizados");
-        eventosRealizados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eventosRealizadosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(eventosRealizados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 83, 200, 30));
-
+        regresar.setBackground(new java.awt.Color(255, 255, 255));
+        regresar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        regresar.setForeground(new java.awt.Color(0, 0, 0));
         regresar.setText("Regresar a Menú Principal");
+        regresar.setBorder(new javax.swing.border.MatteBorder(null));
         regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarActionPerformed(evt);
             }
         });
-        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 313, 230, 30));
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 230, 60));
+
+        PerfilUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        PerfilUsuario.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        PerfilUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        PerfilUsuario.setText("Ver Perfil de usuario");
+        PerfilUsuario.setBorder(new javax.swing.border.MatteBorder(null));
+        PerfilUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PerfilUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PerfilUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 180, 60));
+
+        Ingreso.setBackground(new java.awt.Color(255, 255, 255));
+        Ingreso.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        Ingreso.setForeground(new java.awt.Color(0, 0, 0));
+        Ingreso.setText("Ingreso generado por fecha");
+        Ingreso.setBorder(new javax.swing.border.MatteBorder(null));
+        Ingreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 240, 60));
+
+        eventosCancelados.setBackground(new java.awt.Color(255, 255, 255));
+        eventosCancelados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        eventosCancelados.setForeground(new java.awt.Color(0, 0, 0));
+        eventosCancelados.setText("Listar eventos cancelados");
+        eventosCancelados.setBorder(new javax.swing.border.MatteBorder(null));
+        eventosCancelados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eventosCanceladosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(eventosCancelados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 220, 60));
+
+        eventosFuturos.setBackground(new java.awt.Color(255, 255, 255));
+        eventosFuturos.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        eventosFuturos.setForeground(new java.awt.Color(0, 0, 0));
+        eventosFuturos.setText("Listar eventos futuros");
+        eventosFuturos.setBorder(new javax.swing.border.MatteBorder(null));
+        eventosFuturos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eventosFuturosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(eventosFuturos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 190, 60));
+
+        eventosRealizados.setBackground(new java.awt.Color(255, 255, 255));
+        eventosRealizados.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        eventosRealizados.setForeground(new java.awt.Color(0, 0, 0));
+        eventosRealizados.setText("Listar eventos realizados");
+        eventosRealizados.setBorder(new javax.swing.border.MatteBorder(null));
+        eventosRealizados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eventosRealizadosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(eventosRealizados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 210, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -339,7 +376,6 @@ public class Reportes extends javax.swing.JFrame {
     private javax.swing.JButton Ingreso;
     private javax.swing.JButton PerfilUsuario;
     private javax.swing.JLabel TituloTextBox;
-    private javax.swing.JLabel backgroundLabel;
     public static javax.swing.JLabel cantidadDeportes;
     public static javax.swing.JLabel cantidadMusicales;
     public static javax.swing.JLabel cantidadReligiosos;
@@ -351,6 +387,7 @@ public class Reportes extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     public static javax.swing.JList<String> jList1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton regresar;
     // End of variables declaration//GEN-END:variables
