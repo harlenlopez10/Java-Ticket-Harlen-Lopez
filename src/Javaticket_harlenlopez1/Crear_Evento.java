@@ -31,6 +31,7 @@ public class Crear_Evento extends javax.swing.JFrame {
     public static ArrayList<Evento> eventos=new ArrayList<>();
     public static ArrayList user=new ArrayList<>();
     public static String codigoCrear,tituloCrear,descripcionCrear,equipo1Crear,equipo2Crear,tipoCrear,montoprueba;
+    public static double dineroDeportes, dineroMusical, dineroReligioso;
     public static int cantidadCrear,cantidadDeportivo=0,cantidadMusical=0,cantidadReligioso=0;
     public static int hayEventos=0;
     public static double montoCrear;
@@ -185,7 +186,7 @@ public class Crear_Evento extends javax.swing.JFrame {
                 jComboBox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 100, 40));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 300, 100, 40));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
@@ -281,6 +282,7 @@ public class Crear_Evento extends javax.swing.JFrame {
                             user.add(usuarioLogin);
                             eventos.add(new Evento_Deportivo(codigoCrear,claseCrear,tituloCrear,descripcionCrear,
                                     fechaCrear,montoCrear,cantidadCrear,equipo1Crear,equipo2Crear,tipoCrear));
+                            dineroDeportes+=montoCrear;
                             JOptionPane.showMessageDialog(null, "Ha creado su evento con exito.");
                             cantidadDeportivo++;
                             puedeAvanzar=false;
@@ -316,6 +318,7 @@ public class Crear_Evento extends javax.swing.JFrame {
                             eventos.add(new Evento_Musical(codigoCrear,claseCrear,tituloCrear,descripcionCrear,
                                     fechaCrear,montoCrear,cantidadCrear,tipoCrear));
                             JOptionPane.showMessageDialog(null, "Ha creado su evento con exito.");
+                            dineroMusical+=montoCrear;
                             cantidadMusical++;
                             puedeAvanzar=false;
                             puedeAvanzar1=false;
@@ -346,6 +349,7 @@ public class Crear_Evento extends javax.swing.JFrame {
                     eventos.add(new Evento_Religioso(codigoCrear,claseCrear,tituloCrear,descripcionCrear,
                                     fechaCrear,montoCrear,cantidadCrear));
                     JOptionPane.showMessageDialog(null, "Ha creado su evento con exito.");
+                    dineroReligioso+=montoCrear;
                     cantidadReligioso++;
                     puedeAvanzar=false;
                     puedeAvanzar1=false;

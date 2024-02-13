@@ -24,6 +24,9 @@ public class reportesClase extends reportesClaseAbstract {
     private Date hoy=new Date();
     public int cantiadadDeportivo,cantiadadMusical,cantiadadReligioso;
     public String estado;
+    int montototDeportivo;
+    int montototMusical;
+    int montototReligioso;
     
     public final void listaDeEventosRealizados(int indice){
         if(indice<eventos.size()){
@@ -34,10 +37,13 @@ public class reportesClase extends reportesClaseAbstract {
                     }else{
                         if(eventos.get(indice).getClase().equals("Deportivo")){
                             cantiadadDeportivo++;
+                            montototDeportivo += eventos.get(indice).getMonto();
                         }else if(eventos.get(indice).getClase().equals("Musical")){
                             cantiadadMusical++;
+                             montototMusical += eventos.get(indice).getMonto();
                         }else if(eventos.get(indice).getClase().equals("Religioso")){
                             cantiadadReligioso++;
+                             montototReligioso += eventos.get(indice).getMonto();
                         }
                         montoTotal=montoTotal+eventos.get(indice).getMonto();
                         modelo.addElement("Codigo: "+eventos.get(indice).getCodigo()+", Tipo: "+eventos.get(indice).getClase()+
